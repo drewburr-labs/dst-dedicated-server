@@ -12,13 +12,14 @@ For this project, the `cluster_token.txt` file is located in `DSTClusterConfig/c
 
 Enter the game and press "Play". After you're logged in, bring up the console (by pressing `~`) and type the following command:
 
-```
+```text
 TheNet:GenerateClusterToken()
 ```
 
 Press enter. The console will go away, and a `cluster_token.txt` was generated in:
- - Unix: `~/.klei/DoNotStarveTogether`
- - Windows: `C:\Users\<username>\Documents\Klei\DoNotStarveTogether`
+
+- Unix: `~/.klei/DoNotStarveTogether`
+- Windows: `C:\Users\<username>\Documents\Klei\DoNotStarveTogether`
 
  Get the generated file and **override** `DSTClusterConfig/cluster_token.txt` with it.
 

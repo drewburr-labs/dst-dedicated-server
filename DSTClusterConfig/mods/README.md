@@ -19,7 +19,7 @@ Same as with client mods, in the server they also can be installed but not _enab
 
 You can use the `configuration_options` dictionary for each mod in `modoverrides.lua` to set all the config options the mod supports. See my [custom `modoverrides.lua`](./modoverrides-custom.lua) for examples.
 
-Unfortunately there's no _super simple_ way to figure out what options are available as they are up to the mod developer - and differ for each mod. You may dig through the mod's source code, but that's not practical. 
+Unfortunately there's no _super simple_ way to figure out what options are available as they are up to the mod developer - and differ for each mod. You may dig through the mod's source code, but that's not practical.
 
 Here's what I do to "generate" the `configuration_options` the _easy_ way:
 

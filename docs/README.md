@@ -23,4 +23,3 @@ Enhance your server by customizing it to your liking!
   * [Install Mods](../DSTClusterConfig/mods)
   * [Set Admins, Bans and Whitelisted Players](./AdminBanWhitelist.md)
 * How to optimize your [DST Server Performance](./ServerPerformance.md)
-
