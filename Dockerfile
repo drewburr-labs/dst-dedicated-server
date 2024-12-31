@@ -27,8 +27,8 @@ RUN mkdir -p .klei/DoNotStarveTogether server_dst/mods
 RUN ./steamcmd.sh \
     +@ShutdownOnFailedCommand 1 \
     +@NoPromptForPassword 1 \
-    +login anonymous \
     +force_install_dir /home/dst/server_dst \
+    +login anonymous \
     +app_update 343050 validate \
     +quit
 
