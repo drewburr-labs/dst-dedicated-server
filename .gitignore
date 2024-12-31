@@ -1,1 +1,4 @@
 .DS_Store
+ClusterConfig
+**/cluster_token.txt
+!ClusterConfig-example/cluster_token.txt

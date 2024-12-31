@@ -1,9 +1,9 @@
 # Setting Admins, Bans and Whitelisted Players
 
-You can grant admin and whitelist privileges - or ban players - by adding their **unique identifier** to the desired file. The relevant files can be found in the [`DSTClusterConfig/`](./DSTClusterConfig) folder.
+You can grant admin and whitelist privileges - or ban players - by adding their **unique identifier** to the desired file. The relevant files can be found in the [`ClusterConfig/`](./ClusterConfig-example) folder.
 
 ```text
-DSTClusterConfig/
+ClusterConfig/
   adminlist.txt
   blocklist.txt
   whitelist.txt

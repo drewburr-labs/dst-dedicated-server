@@ -37,6 +37,6 @@ RUN ./steamcmd.sh \
 RUN mkdir -p /home/dst/.klei/DoNotStarveTogether/DSTWhalesCluster /home/dst/server_dst/mods
 VOLUME ["/home/dst/.klei/DoNotStarveTogether/", "/home/dst/server_dst/mods"]
 
-ADD DSTConfigTemplates /home/dst/DSTConfigTemplates
+ADD ConfigTemplates /home/dst/ConfigTemplates
 COPY start-container-server.sh /home/dst/
 ENTRYPOINT ["/home/dst/start-container-server.sh"]

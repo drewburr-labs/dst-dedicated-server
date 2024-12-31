@@ -2,12 +2,7 @@ Thanks for your feedback! If you're having trouble setting up the server, please
 
 * **What is the host OS?** (Windows, Linux, Mac? Which version?)
 * **Where are you running it?** (Local/own computer, VPS, AWS?)
-* **Please paste the logs** [as code snippets](https://help.github.com/articles/basic-writing-and-formatting-syntax/#quoting-code) for both `Master` and `Caves` shards, found at:
-
-```
-~/dst-dedicated-server/DSTClusterConfig/Master/server_log.txt
-~/dst-dedicated-server/DSTClusterConfig/Caves/server_log.txt
-```
+* **Please paste the logs** [as code snippets](https://help.github.com/articles/basic-writing-and-formatting-syntax/#quoting-code) for both `Master` and `Caves` shards
 
 The more information you share the faster we can get your server up and running!
 
