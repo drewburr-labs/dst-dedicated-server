@@ -104,7 +104,7 @@ You can easily do that replacing `InsertYourTokenHere` in the following command 
 
 You should now have everything you **need** to start playing! See the full docs on how to [manage your server](./docs/ManagingTheServer.md) to learn how to **start**, **save** the game and **stop** the server.
 
-Keep on reading to learn how to :point_down: [customize the server](#customizing-the-server--world) :point_down: and [install mods](#managing-mods) to your liking!
+Keep on reading to learn how to :point_down: [customize the server](#customize-the-server-and-world) :point_down: and [install mods](#mods) to your liking!
 
 ---
 
@@ -114,20 +114,18 @@ The files listed below are the ones you'll likely be tweaking to customize your 
 
 > :rotating_light: Changing any files **other than the ones listed below** is only advised if you know what you're doing.
 
-```text
-DSTClusterConfig/
-  Caves/
-    leveldataoverride.lua
-  Master/
-    leveldataoverride.lua
-  mods/
-    dedicated_server_mods_setup.lua
-    modoverrides.lua
-  adminlist.txt
-  blocklist.txt
-  cluster.ini
-  whitelist.txt
-```
+  DSTClusterConfig/
+    Caves/
+      leveldataoverride.lua
+    Master/
+      leveldataoverride.lua
+    mods/
+      dedicated_server_mods_setup.lua
+      modoverrides.lua
+    adminlist.txt
+    blocklist.txt
+    cluster.ini
+    whitelist.txt
 
 ### The Server
 
@@ -136,7 +134,6 @@ DSTClusterConfig/
 This file holds server attributes, such as `max_players`, `pause_when_empty`, `cluster_intention` - and [many others :link:](https://forums.kleientertainment.com/topic/64552-dedicated-server-settings-guide/).
 
 > :bulb: On your **first setup** it's important to change at least the [`cluster_name`](./DSTClusterConfig/cluster.ini#L27) and [`cluster_password`](./DSTClusterConfig/cluster.ini#L29) to be able to identify and join your sever from the game's server list.
-
 > :cop: Please handle with care. There are sections where `[ CHANGE THIS ]` denotes places you **should** change. There are also smaller secitions which **should not be touched** as it might compromise the communication between Master <-> Caves shards.
 
 By default the server will autosave once every game day (`autosaver_enabled = true`).
