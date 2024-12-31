@@ -176,13 +176,37 @@ You can find detailed information and a complete guide in the [Setting Admins, B
 
 Contributions and feedback are always welcome! Feel free to open an [issue](/../../issues) or a [pull request](/../../pulls) with improvements!
 
-## References
+### Local testing
 
-* [How to setup dedicated server with cave on Linux](http://steamcommunity.com/sharedfiles/filedetails/?id=590565473)
-* [Dedicated Server Settings Guide](https://forums.kleientertainment.com/topic/64552-dedicated-server-settings-guide/)
-* [Dedicated Server Command Line Options Guide](https://forums.kleientertainment.com/topic/64743-dedicated-server-command-line-options-guide/)
+The server can be built and tested locally using the following commands:
 
-### Other links
+```sh
+# Build the Dockerfile
+docker build . -t 'localhost/dst:local'
 
-* [Thread in Klei forums](https://forums.kleientertainment.com/topic/84574-dedicated-server-setup-guide-on-any-platform-windowsmaclinux-with-docker/)
-* [Steam Guide](http://steamcommunity.com/sharedfiles/filedetails/?id=1206742951)
+# Run the built contianer, being sure to replace 'cluster_token'
+docker run -p 10999:10999/udp \
+-v ./volumes/DSTWhalesCluster:/home/dst/.klei/DoNotStarveTogether/DSTWhalesCluster \
+-v ./volumes/mods:/home/dst/server_dst/mods \
+-v ./volumes/ClusterConfig:/home/dst/ClusterConfig \
+-e SHARD_NAME=Master \
+-e cluster_name='DST Dedicated Server running on Docker' \
+-e cluster_description='Dedicated Server running on Docker' \
+-e cluster_password='YouShallNotPass!!!' \
+-e cluster_key='randomstring' \
+-e cluster_token='REPLACEME' \
+docker.io/library/dst:local
+
+# If testing clustering, also run the Caves shard
+docker run -p 10998:10998/udp \
+-v ./volumes/DSTWhalesCluster:/home/dst/.klei/DoNotStarveTogether/DSTWhalesCluster \
+-v ./volumes/mods:/home/dst/server_dst/mods \
+-v ./volumes/ClusterConfig:/home/dst/ClusterConfig \
+-e SHARD_NAME=Caves \
+-e cluster_name='DST Dedicated Server running on Docker' \
+-e cluster_description='Dedicated Server running on Docker' \
+-e cluster_password='YouShallNotPass!!!' \
+-e cluster_key='randomstring' \
+-e cluster_token='REPLACEME' \
+docker.io/library/dst:local
+```
