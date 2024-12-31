@@ -18,7 +18,7 @@ The purpose of this project is to have DST servers up and running with the **bar
 
 Any OS that [supports Docker](https://docs.docker.com/engine/installation/#supported-platforms) can run the dedicated server.
 
->:bulb: Linux is the _recommended_ OS to host the containers for better performance gains
+> :bulb: Linux is the _recommended_ OS to host the containers for better performance gains
 
 This project was deployed and tested using **Debian 9**. Instructions will be focused on Linux - but it should be easy to adapt to any other OS.
 
