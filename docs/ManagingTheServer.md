@@ -25,7 +25,6 @@ It's possible to execute [game console commands](http://dontstarve.wikia.com/wik
     docker attach dst_master
 
 > :warning: Caution! Every input will be forwarded to the container when attached. That means if you hit `CTRL-c` the container will receive `SIGINT` and will gracefully stop.
-
 > :point_up: It's only possible to attach to the Master shard (`dst_master` container) as it's the one who manages the slave (Caves shard, `dst_caves`). i.e. Running `c_shutdown()` on the Master shard will shutdown **all** shards, while running it on Caves would shutdown the Caves shard only.
 
 Once attached, you may run any commands to manage the game such as `c_save()`, `c_spanw()`, `c_regenerateworld()`, etc.

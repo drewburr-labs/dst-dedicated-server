@@ -1,9 +1,9 @@
 # Setting Admins, Bans and Whitelisted Players
 
-You can grant admin and whitelist privileges - or ban players - by adding their **unique identifier** to the desired file. The relevant files can be found in the [`DSTClusterConfig/`](./DSTClusterConfig) folder.
+You can grant admin and whitelist privileges - or ban players - by adding their **unique identifier** to the desired file. The relevant files can be found in the [`ClusterConfig/`](./ClusterConfig-example) folder.
 
-```
-DSTClusterConfig/
+```text
+ClusterConfig/
   adminlist.txt
   blocklist.txt
   whitelist.txt
@@ -35,13 +35,13 @@ Quite straightforward. Don't want someone messing around your world? Add them to
 
 :bulb: Remember you can kick/ban players from the game interface! That will add the player to the `blocklist.txt` file automatically for you.
 
-# How to retrieve player's unique identifiers
+## How to retrieve player's unique identifiers
 
 The identifiers are **usually** (they might vary a bit) 11 characters long, always prefixed by `KU_` followed by 8 (or more) alphanumeric characters (`[a-zA-Z0-9]`). Examples: `KU_A1b2C3d4`, `KU_aAaA11bB`, `KU_zyXWFegd`.
 
 Once you have the ids, add them - one per line - in the file you want. Example of `adminlist.txt`:
 
-```
+```text
 KU_A1b2C3d4
 KU_aAaA11bB
 KU_zyXWFegd
@@ -49,11 +49,11 @@ KU_zyXWFegd
 
 There are a few ways to get the player identifier. Here's 2 methods for you to choose the one that suits you best:
 
-## Server logs
+### Server logs
 
 Easiest one if you have access to the server logs. Watch the logs (`tail -f` - or however you prefer) while the desired player is joining. You'll see some messages like these:
 
-```
+```text
 [01:52:27]: New incoming connection 123.123.123.123|44444     -- IP Address|Port from client connecting
 [01:52:27]: Client connected from 123.123.123.123|44444
 [01:52:27]: ValidateGameSessionToken pgs-usc^KU_aBCd1234^DontStarveTogether^1cx+crazyEncryptedTokenHash/yolol9=
@@ -65,7 +65,7 @@ Easiest one if you have access to the server logs. Watch the logs (`tail -f` - o
 * Player unique identifier: `KU_aBCd1234`
 * Player name on Steam: `WesIsTheBes` (:thinking:)
 
-## Ban the player through the game interface
+### Ban the player through the game interface
 
 Sounds weird but it works quite well. This way the player id will show up in `blocklist.txt`. All you have to do is to **move** it from there to your desired `adminlist.txt` or `whitelist.txt`.
 
