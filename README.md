@@ -56,7 +56,9 @@ Read about [server performance](./docs/ServerPerformance.md) for useful tips to 
 
 ### Install Git
 
-    sudo apt-get install git
+```sh
+sudo apt-get install git
+```
 
 ### Install Docker
 
@@ -80,7 +82,9 @@ You only need the [Docker desktop standalone](https://docs.docker.com/engine/ins
 
 Clone this repository in your home folder:
 
-    cd ~ && git clone https://github.com/mathielo/dst-dedicated-server.git
+```sh
+cd ~ && git clone https://github.com/mathielo/dst-dedicated-server.git
+```
 
 > :cop: Do **not** `sudo git clone` or your might run into permission issues :angel:
 
@@ -94,7 +98,9 @@ Check the [detailed instructions to generate a cluster token](./docs/ClusterToke
 
 You can easily do that replacing `InsertYourTokenHere` in the following command and executing it in your server:
 
-    echo 'InsertYourTokenHere' > ~/dst-dedicated-server/DSTClusterConfig/cluster_token.txt
+```sh
+echo 'InsertYourTokenHere' > ~/dst-dedicated-server/DSTClusterConfig/cluster_token.txt
+```
 
 :closed_lock_with_key: The account that generates the token automatically gains admin access in-game, meaning you can rollback, regenerate the world or use console commands while playing.
 
@@ -114,18 +120,20 @@ The files listed below are the ones you'll likely be tweaking to customize your 
 
 > :rotating_light: Changing any files **other than the ones listed below** is only advised if you know what you're doing.
 
-  DSTClusterConfig/
-    Caves/
-      leveldataoverride.lua
-    Master/
-      leveldataoverride.lua
-    mods/
-      dedicated_server_mods_setup.lua
-      modoverrides.lua
-    adminlist.txt
-    blocklist.txt
-    cluster.ini
-    whitelist.txt
+```text
+DSTClusterConfig/
+  Caves/
+    leveldataoverride.lua
+  Master/
+    leveldataoverride.lua
+  mods/
+    dedicated_server_mods_setup.lua
+    modoverrides.lua
+  adminlist.txt
+  blocklist.txt
+  cluster.ini
+  whitelist.txt
+```
 
 ### The Server
 
@@ -147,8 +155,10 @@ Determines the settings for world generation for each shard, respectively:
 
 You may tweak them as much as you like, granted that **the cave one** always have these defined:
 
-    id="DST_CAVE"
-    location="Cave"
+```text
+id="DST_CAVE"
+location="Cave"
+```
 
 ### Mods
 
