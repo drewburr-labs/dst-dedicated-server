@@ -1,10 +1,8 @@
 FROM debian:latest
 
-MAINTAINER Caio Mathielo <mathielo@gmail.com>
-
 LABEL \
     description="Don't Starve Together dedicated server" \
-    source="https://github.com/mathielo/dst-dedicated-server"
+    source="https://github.com/drewburr-labs/dst-dedicated-server"
 
 # Create specific user to run DST server
 RUN useradd -ms /bin/bash/ dst
