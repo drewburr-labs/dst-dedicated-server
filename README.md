@@ -50,17 +50,17 @@ Enhance your server by customizing it to your liking!
 
 ---
 
-# Prepare the Host
+## Prepare the Host
 
 Read about [server performance](./docs/ServerPerformance.md) for useful tips to make the best use of your resources! That might also help you to [pick a host](./ServerPerformance.md#picking-a-host) machine if you're unsure about it.
 
-## Install Git
+### Install Git
 
     sudo apt-get install git
 
-## Install Docker
+### Install Docker
 
-### Linux
+#### Linux
 
 Follow the official docs to install Docker on Linux. At first glance it might seem complicated, but the instructions are very detailed and thorough:
 
@@ -72,11 +72,11 @@ Follow the official docs to install Docker on Linux. At first glance it might se
   * Enable your user to manage `docker` without the need of `sudo`
   * Configure Docker to start on boot
 
-### Mac OS / Windows
+#### Mac OS / Windows
 
 You only need the [Docker desktop standalone](https://docs.docker.com/engine/installation/#desktop) as it has everything you need, no extra steps required.
 
-# Prepare the dedicated server
+## Prepare the dedicated server
 
 Clone this repository in your home folder:
 
@@ -86,7 +86,7 @@ Clone this repository in your home folder:
 
 See more info in [Managing the Server](./docs/ManagingTheServer.md).
 
-## Generate `cluster_token.txt`
+### Generate `cluster_token.txt`
 
 :warning: The cluster token is stored in the `DSTClusterConfig/cluster_token.txt` file and without it **your server won't run**.
 
@@ -100,7 +100,7 @@ You can easily do that replacing `InsertYourTokenHere` in the following command 
 
 :rainbow: Done! You are ready to start your server and play!
 
-# Manage the Server
+## Manage the Server
 
 You should now have everything you **need** to start playing! See the full docs on how to [manage your server](./docs/ManagingTheServer.md) to learn how to **start**, **save** the game and **stop** the server.
 
@@ -108,13 +108,13 @@ Keep on reading to learn how to :point_down: [customize the server](#customizing
 
 ---
 
-# Customize the Server and World
+## Customize the Server and World
 
 The files listed below are the ones you'll likely be tweaking to customize your server and world to your likes.
 
 > :rotating_light: Changing any files **other than the ones listed below** is only advised if you know what you're doing.
 
-```
+```text
 DSTClusterConfig/
   Caves/
     leveldataoverride.lua
@@ -129,7 +129,7 @@ DSTClusterConfig/
   whitelist.txt
 ```
 
-## The Server
+### The Server
 
 * [DSTClusterConfig/cluster.ini](./DSTClusterConfig/cluster.ini)
 
@@ -141,7 +141,7 @@ This file holds server attributes, such as `max_players`, `pause_when_empty`, `c
 
 By default the server will autosave once every game day (`autosaver_enabled = true`).
 
-## The World
+### The World
 
 Determines the settings for world generation for each shard, respectively:
 
@@ -153,11 +153,11 @@ You may tweak them as much as you like, granted that **the cave one** always hav
     id="DST_CAVE"
     location="Cave"
 
-## Mods
+### Mods
 
 Check the [detailed instructions](./DSTClusterConfig/mods) on how to install, configure and enable mods. :alien:
 
-## Admins, Bans and Whitelists
+### Admins, Bans and Whitelists
 
 If you know what you're after, the `(admin|block|white)list.txt` files can be found within the [`DSTClusterConfig/`](./DSTClusterConfig) folder.
 
@@ -165,11 +165,11 @@ You can find detailed information and a complete guide in the [Setting Admins, B
 
 ---
 
-# Contributing
+## Contributing
 
 Contributions and feedback are always welcome! Feel free to open an [issue](/../../issues) or a [pull request](/../../pulls) with improvements!
 
-# References
+## References
 
 * [How to setup dedicated server with cave on Linux](http://steamcommunity.com/sharedfiles/filedetails/?id=590565473)
 * [Dedicated Server Settings Guide](https://forums.kleientertainment.com/topic/64552-dedicated-server-settings-guide/)

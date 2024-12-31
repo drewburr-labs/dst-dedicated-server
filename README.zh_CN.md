@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/github/license/mathielo/dst-dedicated-server.svg)](https://github.com/mathielo/dst-dedicated-server/blob/master/LICENSE.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-round)](http://makeapullrequest.com)
 
-饥荒-联机版 专用服务器 Docker 版搭建指南 (Linux、Mac、Windows) 
+饥荒-联机版 专用服务器 Docker 版搭建指南 (Linux、Mac、Windows)
 
 此项目的目的是使用**最少**的配置快速搭建出一个饥荒联机版的专用服务器。
 
@@ -14,7 +14,7 @@
 
 - [README in English](README.md)
 
-# 安装
+## 安装
 
 任何支持 [Docker](https://docs.docker.com/engine/installation/#supported-platforms) 的系统都可以运行这个专用服务器。
 
@@ -22,9 +22,9 @@
 
 该项目主要使用 **Debian 9** 来进行部署测试，侧重 Linux。但是其他操作系统应该也没问题。
 
-## 安装速览
+### 安装速览
 
-### 必须条件
+#### 必须条件
 
 这些是满足服务器运行的最低条件
 
@@ -37,7 +37,7 @@
 - [管理服务器](docs/ManagingTheServer.md) (如何启动、保存、停止服务器)
 - [基础服务器设定](#服务器设定) (服务器名、密码、其他配置)
 
-### 可选设定
+#### 可选设定
 
 根据自己的喜好来配置自己的服务器
 
@@ -50,17 +50,17 @@
 
 * * *
 
-# 准备一台主机
+## 准备一台主机
 
 请阅读 [DST服务器性能Tips](docs/ServerPerformance.md) 来充分利用您的服务器资源。如果你不了解这些，可以看其中的 [如何选择服务器](docs/ServerPerformance.md#picking-a-host) 一节来帮你选择一台配置合适的主机。
 
-## 安装 Git
+### 安装 Git
 
     sudo apt-get install git
 
-## 安装 Docker
+### 安装 Docker
 
-### Linux
+#### Linux
 
 按照Docker官网的 [Get Docker CE for Debian](https://docs.docker.com/install/linux/docker-ce/debian) 文档进行安装，第一次看可能觉得复杂，但是文档描述的很详细和透彻。
 
@@ -74,11 +74,11 @@
   - 设置你的用户可以免 `sudo` 使用 `docker`
   - 配置你的 `Docker` 为开机启动
 
-### Mac OS / Windows
+#### Mac OS / Windows
 
 您只需要下载适合您系统的 [Docker desktop standalone](https://docs.docker.com/engine/installation/#desktop) 安装文件就可以了，几乎无需配置。
 
-# 准备服务器端文件
+## 准备服务器端文件
 
 克隆(clone)这个仓库下来到你的用户目录：
 
@@ -88,7 +88,7 @@
 
 在 [Managing the Server](docs/ManagingTheServer.md) 查看更多相关信息。
 
-## 生成令牌文件
+### 生成令牌文件
 
 :warning: 饥荒服务器的令牌文件存储在 `DSTClusterConfig/cluster_token.txt` 文件中，如果没有这个文件，**饥荒服务器无法启动**。
 
@@ -102,7 +102,7 @@
 
 :rainbow: OK! 到这里你就可以启动你的服务器进行游玩啦！
 
-# 管理服务器
+## 管理服务器
 
 你现在应该已有所需的一切！请参阅有关 [管理服务器](docs/ManagingTheServer.md) 的完整文档，以了解如何**启动**，**保存**游戏和**停止**服务器。
 
@@ -110,7 +110,7 @@
 
 * * *
 
-# 自定义服务器和世界设定
+## 自定义服务器和世界设定
 
 如下目录结构和文件列表是配置您喜欢的服务器设定和世界设定的配置文件
 
@@ -131,7 +131,7 @@ DSTClusterConfig/
   whitelist.txt
 ```
 
-## 服务器设定
+### 服务器设定
 
 - [DSTClusterConfig/cluster.ini](./DSTClusterConfig/cluster.ini)
 
@@ -143,7 +143,7 @@ DSTClusterConfig/
 
 默认情况下，游戏会在游戏中的清晨自动保存一次(`autosaver_enabled = true`)。
 
-## 世界设定
+### 世界设定
 
 需要为 `Master`(地上)/`Caves`(洞穴) 配置对应的世界配置文件:
 
@@ -157,11 +157,11 @@ DSTClusterConfig/
     location="Cave"
 ```
 
-## Mods
+### Mods
 
 查看 [详细说明](./DSTClusterConfig/mods) 来配置 MOD (安装、配置、启用等) :alien:
 
-## 管理员、BAN人、白名单
+### 管理员、BAN人、白名单
 
 如果你明确你的目的，这些文件 `(admin|block|white)list.txt` 可以在 [`DSTClusterConfig/`](./DSTClusterConfig) 中找到。
 
@@ -169,17 +169,17 @@ DSTClusterConfig/
 
 * * *
 
-# 贡献
+## 贡献
 
 我们随时欢迎您的贡献和反馈！随意打开一个 [issue](/../../issues) 或 [pull request](/../../pulls) 来提交改进。
 
-# 参考文献
+## 参考文献
 
 - [How to setup dedicated server with cave on Linux](http://steamcommunity.com/sharedfiles/filedetails/?id=590565473)
 - [Dedicated Server Settings Guide](https://forums.kleientertainment.com/topic/64552-dedicated-server-settings-guide/)
 - [Dedicated Server Command Line Options Guide](https://forums.kleientertainment.com/topic/64743-dedicated-server-command-line-options-guide/)
 
-### 其他链接
+#### 其他链接
 
 - [Thread in Klei forums](https://forums.kleientertainment.com/topic/84574-dedicated-server-setup-guide-on-any-platform-windowsmaclinux-with-docker/)
 - [Steam Guide](http://steamcommunity.com/sharedfiles/filedetails/?id=1206742951)
